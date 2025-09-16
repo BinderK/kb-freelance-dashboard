@@ -85,7 +85,11 @@ ehthumbs.db
 Thumbs.db
 
 # Editor directories and files
-.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/extensions.json
+.vscode/README.md
+.vscode/chrome-debug-profile/
 .idea/
 *.swp
 *.swo
