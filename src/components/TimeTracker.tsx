@@ -52,6 +52,7 @@ const TimeTracker: React.FC = () => {
         <button
           onClick={refreshData}
           disabled={isLoading}
+          aria-label="Refresh data"
           className="p-2 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 transition-colors disabled:opacity-50"
         >
           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,10 +104,11 @@ const TimeTracker: React.FC = () => {
         <form onSubmit={handleStartTimer} className="mb-6 space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-2">
+              <label htmlFor="client-input" className="block text-sm font-medium text-white/80 mb-2">
                 Client
               </label>
               <input
+                id="client-input"
                 type="text"
                 value={client}
                 onChange={(e) => setClient(e.target.value)}
@@ -116,10 +118,11 @@ const TimeTracker: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-2">
+              <label htmlFor="project-input" className="block text-sm font-medium text-white/80 mb-2">
                 Project
               </label>
               <input
+                id="project-input"
                 type="text"
                 value={project}
                 onChange={(e) => setProject(e.target.value)}
@@ -130,10 +133,11 @@ const TimeTracker: React.FC = () => {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium text-white/80 mb-2">
+            <label htmlFor="description-input" className="block text-sm font-medium text-white/80 mb-2">
               Description (Optional)
             </label>
             <input
+              id="description-input"
               type="text"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
